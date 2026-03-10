@@ -15,31 +15,17 @@ hero_area:
   bg_image: "/assets/images/art/bg11.webp"
   vimeo_video_id: "124071444"
 
-services_area:
+two_column_two:
   enable: true
-  title: "Our Services"
-  sub_title: "The full service we are offering is specifically designed to meet your business needs."
-  description: |
-    Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio. Vestibulum id ligula porta felis euismod semper. Maecenas sed diam eget risus varius blandit sit amet non magna. Donec sed odio dui.
+  title: "We bring solutions to make life easier for our customers"
+  image: "/assets/images/art/ui3.webp"
   button_text: "More Details"
   button_url: "#"
-  services:
-    - title: "24/7 Support"
-      sub_title: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo odio. Cum"
-      icon: "/assets/images/icon/hs-24-hours-1.webp" 
-
-    - title: "Secure Payments"
-      sub_title: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo odio.Cum"
-      icon: "/assets/images/icon/st-payment-method.webp" 
-
-    - title: "Daily Updates"
-      sub_title: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo odio. Cum"
-      icon: "/assets/images/icon/ms-cloud-computing.webp" 
-
-    - title: "Research & Marketing"
-      sub_title: "Nulla vitae elit libero, a pharetra augue. Donec id elit non mi porta gravida at eget metus. Cras justo odio. Cum"
-      icon: "/assets/images/icon/of-diagram.webp" 
-
+  paragraphs:
+    - text: |
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio.
+    - text: |
+        Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Aenean lacinia bibendum nulla sed.
 
 two_columns_area_one:
   enable: true
@@ -369,44 +355,33 @@ cover_image:
       <!--/column -->
       <div class="space50 d-none d-md-block d-xl-none"></div>
       <div class="col-xl-6 order-xl-2 text-center grid">
-        <div class="row isotope">
-          {% for service in page.services_area.services %}
-          {% assign check_index = forloop.index | modulo: 2 %}
-          {% unless check_index == 1 %}
-          <div class="col-md-6 item grid-sizer">
-            <div class="space30"></div>
-            <div class="box bg-white shadow shadow-hover">
-              {% if service.icon %}
-              <div class="icon icon-svg mb-20">
-                <img src="{{service.icon}}" alt="{{service.title}}"/>
-              </div>
-              {% endif %}
-              <h5>{{service.title}}</h5>
-              <p>{{service.sub_title}}</p>
-            </div>
-            <!--/.box -->
-          </div>
-          <!--/column -->
-          {% else %}
-          <div class="col-md-6 item grid-sizer">
-            {% unless forloop.index == 1 %}
-            <div class="space30 d-none d-md-block"></div>
-            {% endunless %}
-            <div class="box bg-white shadow shadow-hover">
-              {% if service.icon %}
-              <div class="icon icon-svg mb-20">
-                <img src="{{service.icon}}" alt="{{service.title}}"/>
-              </div>
-              {% endif %}
-              <h5>{{service.title}}</h5>
-              <p>{{service.sub_title}}</p>
-            </div>
-            <!--/.box -->
-          </div>
-          <!--/column -->
-          {% endunless %}
-          {% endfor %}
-        </div>
+                {% if page.two_column_two.enable %}
+                <div class="two-column-two">
+                    <div class="space140"></div>
+                    <div class="row align-items-center">
+                        {% if page.two_column_two.image %}
+                        <div class="col-lg-6 order-lg-2">
+                            <figure>
+                                <img src="{{page.two_column_two.image}}" alt="{{page.two_column_two.title}}" />
+                            </figure>
+                        </div>
+                        {% endif %}
+                        <div class="col-lg-6 pl-60 pl-md-15">
+                            {% if page.two_column_two.title %}
+                            <h3 class="display-3">{{page.two_column_two.title}}</h3>
+                            {% endif %}
+                            <div class="space20"></div>
+                            {% for text_data in page.two_column_two.paragraphs %}
+                            <p>{{text_data.text}}</p>
+                            {% endfor %} {% if page.two_column_two.button_text %}
+                            <div class="space10"></div>
+                            <a href="{{page.two_column_two.button_url}}" class="btn btn-default">{{page.two_column_two.button_text}}</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <!--/.row -->
+                </div>
+                {% endif %}
         <!--/.row -->
       </div>
       <!--/column -->
