@@ -115,40 +115,6 @@ progress_area:
       numbers: "90"
       color: "yellow"
 
-projects_area:
-  enable: true
-  title: "Our Projects"
-  sub_title: "Check out some of our awesome projects with creative ideas and great design."
-  projects:
-
-    - title: "Clipboard Office"
-      sub_title: "Application"
-      images:
-        - img: "/assets/images/art/s3.webp"
-        - img: "/assets/images/art/s3-2.webp"
-      url: "#"
-
-    - title: "Branding Stationery"
-      sub_title: "Video, Application"
-      images:
-        - img: "/assets/images/art/s4.webp"
-        - img: "/assets/images/art/s4-2.webp"
-      url: "#"
-
-    - title: "Brown Paper Card"
-      sub_title: "Branding"
-      images:
-        - img: "/assets/images/art/s5.webp"
-        - img: "/assets/images/art/s5-2.webp"
-      url: "#"
-
-    - title: "Shopping Paperbag"
-      sub_title: "Corporate, Branding"
-      images:
-        - img: "/assets/images/art/s6.webp"
-        - img: "/assets/images/art/s6-2.webp"
-      url: "#"
-
 awards_area:
   enable: true
   title: "Let's Work Together"
@@ -539,56 +505,6 @@ cover_image:
 </div>
 </div>
 {% endif %}
- {% if page.projects_area.enable %}
-  <div class="projects-area">
-    <div class="wrapper light-wrapper">
-    <div class="container inner">
-      <div class="row">
-        <div class="col-md-7 mx-auto">
-          <h2 class="title-color color-gray text-center">{{page.projects_area.title}}</h2>
-          <h3 class="display-3 text-center">{{page.projects_area.sub_title}}</h3>
-          <div class="space40"></div>
-        </div>
-      </div>
-      <div class="grid grid-view light-gallery-wrapper">
-        <div class="carousel owl-carousel" data-margin="30" data-dots="true" data-autoplay="false" data-autoplay-timeout="5000" data-responsive='{"0":{"items": "1"}, "768":{"items": "2"}, "992":{"items": "3"}}'>
-         {% for project in page.projects_area.projects %}
-          <div class="item item-detailed">
-            <figure class="rounded mb-30">
-              <div class="item-detailed-image">
-                {% for image in project.images %}
-                 <img src="{{image.img}}" alt="{{project.title}}"/>
-                {% endfor %}
-              </div>
-                <a href="{{project.images[0].img}}" class="hover-icon-first lightbox" data-tip="{{project.title}}">
-                  <i class="jam jam-qr-code"></i>
-                </a>
-                {% if project.url %}
-                  <a href="{{project.url}}" class="hover-icon-second" data-tip="See details">
-                    <i class="jam jam-link"></i>
-                  </a>
-                {% endif %}
-            </figure>
-            <div class="item-content">
-              {% if project.title %}
-               <h2 class="post-title mb-10"><a href="{{project.url}}">{{project.title}}</a></h2>
-              {% endif %}
-              {% if project.sub_title %}
-               <div class="meta mb-0">{{project.sub_title}}</div>
-              {% endif %}
-            </div>
-            <!-- /.item-content -->
-          </div>
-          {% endfor %}
-        </div>
-        <!-- /.owl-carousel -->
-      </div>
-      <!-- /.grid-view -->
-    </div>
-    <!-- /.container -->
-  </div>
-  </div>
-  {% endif %}
   {% if page.awards_area.enable %}
   <div class="awards-area">
   <div class="wrapper light-wrapper">
