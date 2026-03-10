@@ -60,18 +60,16 @@ social_accounts:
 
 # Site Wide External Links for footer
 external_links:
-  title: "Learn More"
+  title: "The Network"
   links:
     - url: "#"
-      text: "About Us"
+      text: "Community"
     - url: "#"
-      text: "Our Story"
+      text: "Archetypes"
     - url: "#"
-      text: "Projects"
+      text: "Events"
     - url: "#"
-      text: "Pricing"
-    - url: "#"
-      text: "Features"
+      text: "Blog"
 
 # Site Wide External Links for footer
 external_links_02:
