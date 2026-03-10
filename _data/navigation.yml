@@ -2,16 +2,13 @@ main_menu:
 
   - text: "Home"
     url: "/"
-  - text: "Features"
+  - text: "Community"
     url: "#"
         
-  - text: "Architypes"
-    url: "#architypes"
+  - text: "Archetypes"
+    url: "#archetypes"
 
-  - text: "Elements"
-    url: "#"
-
-  - text: "Portfolio"
+  - text: "Events"
     url: "#"
 
   - text: "Blog"
