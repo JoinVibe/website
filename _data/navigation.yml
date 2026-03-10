@@ -2,6 +2,7 @@ main_menu:
 
   - text: "Home"
     url: "/"
+    
   - text: "Community"
     url: "#"
         
