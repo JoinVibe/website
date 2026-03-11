@@ -44,6 +44,28 @@ two_columns_area_one:
     - title: "The Entrepreneur"
       description: "Entrepreneurs bring everything together by organizing resources, building companies, and driving execution. They turn ideas into scalable ventures and lasting impact."
 
+progress_area:
+  enable: true
+  title: "Company Progress"
+  bg_image: "/assets/images/art/bg5.webp"
+  lists:
+    - title: "New Visitors"
+      sub_title: "Maecenas faucibus mollis interdum. Aenean eu leo."
+      numbers: "75"
+      color: "blue"
+    - title: "Social Media"
+      sub_title: "Maecenas faucibus mollis interdum. Aenean eu leo."
+      numbers: "80"
+      color: "green"
+    - title: "Referrals"
+      sub_title: "Maecenas faucibus mollis interdum. Aenean eu leo."
+      numbers: "60"
+      color: "red"
+    - title: "Search Engines"
+      sub_title: "Maecenas faucibus mollis interdum. Aenean eu leo."
+      numbers: "90"
+      color: "yellow"
+
 awards_area:
   enable: true
   title: "Built by the Community"
@@ -243,59 +265,6 @@ cover_image:
     </div>
     {% endif %}
 
-    {% if page.services_area.enable %}
-    <div class="services-wrapper">
-      <div class="row align-items-center">
-      <div class="col-xl-6 pr-60 pr-lg-15">
-        {% if page.services_area.title %}
-         <h2 class="title-color color-default">{{page.services_area.title}}</h2>
-        {% endif %}
-        {% if page.services_area.sub_title %}
-         <h3 class="display-3">{{page.services_area.sub_title}}</h3>
-        {% endif %}
-        <div class="space20"></div>
-        {% if page.services_area.description %}
-         <p>{{page.services_area.description}}</p>
-        {% endif %}
-        {% if page.services_area.button_text %}
-        <div class="space20"></div>
-         <a href="{{page.services_area.button_url}}" class="btn">{{page.services_area.button_text}}</a>
-        {% endif %}
-      </div>
-      <div id="archetypes" class="video-area"></div>
-      <div class="space50 d-none d-md-block d-xl-none"></div>
-      <div class="col-xl-6 order-xl-2 text-center grid">
-                {% if page.two_column_two.enable %}
-                <div class="two-column-two">
-                    <div class="space140"></div>
-                    <div class="row align-items-center">
-                        {% if page.two_column_two.image %}
-                        <div class="col-lg-6 order-lg-2">
-                            <figure>
-                                <img src="{{page.two_column_two.image}}" alt="{{page.two_column_two.title}}" />
-                            </figure>
-                        </div>
-                        {% endif %}
-                        <div class="col-lg-6 pl-60 pl-md-15">
-                            {% if page.two_column_two.title %}
-                            <h3 class="display-3">{{page.two_column_two.title}}</h3>
-                            {% endif %}
-                            <div class="space20"></div>
-                            {% for text_data in page.two_column_two.paragraphs %}
-                            <p>{{text_data.text}}</p>
-                            {% endfor %} {% if page.two_column_two.button_text %}
-                            <div class="space10"></div>
-                            <a href="{{page.two_column_two.button_url}}" class="btn btn-default">{{page.two_column_two.button_text}}</a>
-                            {% endif %}
-                        </div>
-                    </div>
-                </div>
-                {% endif %}
-      </div>
-    </div>
-    </div>
-    {% endif %}
-
     {% if page.two_columns_area_one.enable %}
     <div class="two-columns-one">
     <div class="space140"></div>
@@ -331,75 +300,33 @@ cover_image:
     </div>
     </div>
     {% endif %}
-
-    {% if page.two_columns_area_three.enable %}
-    <div class="two-columns-three">
-    <div class="space140"></div>
-    <div class="row align-items-center">
-      {% if page.two_columns_area_three.image %}
-      <div class="col-lg-6 text-center">
-        <div class="img-blob blob3">
-          <img src="{{page.two_columns_area_three.image}}" style="width: 30rem" alt="{{page.two_columns_area_three.title}}"/>
-        </div>
-      </div>
-      {% endif %}
-      <div class="space20 d-md-none"></div>
-      <div class="space50 d-none d-md-block d-lg-none"></div>
-      <div class="col-lg-6 pl-60 pl-md-15">
-        {% if page.two_columns_area_three.title %}
-         <h2 class="title-color color-default">{{page.two_columns_area_three.title}}</h2>
-        {% endif %}
-        {% if page.two_columns_area_three.sub_title %}
-         <h3 class="display-3">{{page.two_columns_area_three.sub_title}}</h3>
-        {% endif %}
-        <div class="space20"></div>
-        <div id="accordion-1" class="accordion-wrapper simple">
-          {% for tab in page.two_columns_area_three.tabs %}
-          <div class="card">
-            <div class="card-header" id="accordion-heading-1-{{forloop.index}}">
-              <h5>
-                <button data-toggle="collapse" data-target="#accordion-collapse-1-{{forloop.index}}" aria-expanded="true" aria-controls="accordion-collapse-1-{{forloop.index}}">{{tab.title}}</button>
-              </h5>
-            </div>
-            <div id="accordion-collapse-1-{{forloop.index}}" class="collapse {% if forloop.index == 1 %} show {% endif %}" aria-labelledby="accordion-heading-1-{{forloop.index}}" data-parent="#accordion-1">
-              <div class="card-body">
-                <p>{{tab.content}}</p>
-              </div>
-            </div>
-          </div>
-         {% endfor %}
-        </div>
-      </div>
-    </div>
-    </div>
-    {% endif %}
     </div>
   </div>
 
 {% if page.progress_area.enable %}
-<div id="events" class="video-area"></div>
+<div id="progress" class="video-area"></div>
 <div class="progress-area">
   <div class="wrapper image-wrapper bg-image inverse-text" data-image-src="{{page.progress_area.bg_image}}">
-  <div class="container inner">
-    <div class="row">
-      <div class="col-md-10 offset-md-1">
-        {% if page.progress_area.title %}
-         <h2 class="title-color color-white text-center">{{page.progress_area.title}}</h2>
-        {% endif %}
-        <div class="space20"></div>
-        <div class="row text-center">
-          {% for list in page.progress_area.lists %}
-          <div class="col-md-6 col-lg-3">
-            <div class="progressbar circle {{list.color}}" data-value="{{list.numbers}}"></div>
-            <h5>{{list.title}}</h5>
-            <p>{{list.sub_title}}</p>
+    <div class="container inner">
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          {% if page.progress_area.title %}
+           <h2 class="title-color color-white text-center">{{page.progress_area.title}}</h2>
+          {% endif %}
+          <div class="space20"></div>
+          <div class="row text-center">
+            {% for list in page.progress_area.lists %}
+            <div class="col-md-6 col-lg-3">
+              <div class="progressbar circle {{list.color}}" data-value="{{list.numbers}}"></div>
+              <h5>{{list.title}}</h5>
+              <p>{{list.sub_title}}</p>
+            </div>
+            {% endfor %}
           </div>
-          {% endfor %}
         </div>
       </div>
     </div>
   </div>
-</div>
 </div>
 {% endif %}
 
