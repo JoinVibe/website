@@ -20,8 +20,8 @@ font_scheme:  # Jost, Nunito , DM Sans + Zilla Slab , HK Grotesk, Abhaya, Libre
 # Sitewide Logo
 black_logo_1x: "/assets/images/logo.svg"
 black_logo_2x: "/assets/images/logo.svg"
-light_logo_1x: "/assets/images/logo-light.webp"
-light_logo_2x: "/assets/images/logo-light@2x.webp"
+light_logo_1x: "/assets/images/logo-light.svg"
+light_logo_2x: "/assets/images/logo-light.svg"
 
 # Site Wide Address and Phone Number
 address_01: 'Moonshine St. <br>14/05 Light City,<br /> London, United Kingdom'
