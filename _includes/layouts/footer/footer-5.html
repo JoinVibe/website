@@ -1,4 +1,3 @@
-<!-- Minimal Footer  -->
 <footer class="{% if include.extra_class %} {{include.extra_class}} {% else %} dark-wrapper inverse-text {% endif %}">
   <div class="container inner">
     <div class="row">
@@ -13,23 +12,19 @@
             {% endif %}
           </a>          
           <div class="space40"></div>
-          <p>{{site.data.general_settings.copyright_text}}</p>
+          <p>Connecting the visionaries and builders of tomorrow.</p>
         </div>
-        <!-- /.widget -->
-      </div>
-      <!-- /column -->
+        </div>
       <div class="col-md-4 col-lg-3">
         <div class="widget">
-          <h3 class="widget-title">Get in Touch</h3>
-          {% if site.data.general_settings.address_01 %}
-           <address>{{site.data.general_settings.address_01}}</address>
-          {% endif %}
-           <a href="mailto:{{site.data.general_settings.email}}">{{site.data.general_settings.email}}</a><br />
-          {{site.data.general_settings.phone_number}}
+          <h3 class="widget-title">Follow Us</h3>
+          <ul class="social social-mute social-s">
+            {% for social_links in site.data.general_settings.social_accounts.links %}
+              <li><a href="{{social_links.url}}"><i class="{{social_links.icon}}"></i></a></li>
+            {% endfor %}
+          </ul>
         </div>
-        <!-- /.widget -->
-      </div>
-      <!-- /column -->
+        </div>
       <div class="col-md-4 col-lg-3">
         {% assign external_links = site.data.general_settings.external_links %}
         <div class="widget">
@@ -38,13 +33,11 @@
           {% endif %}
           <ul class="list-unstyled mb-0">
             {% for links in external_links.links %}
-            <li><a href="{{libks.url}}">{{links.text}}</a></li>
+            <li><a href="{{links.url}}">{{links.text}}</a></li>
             {% endfor %}
           </ul>
         </div>
-        <!-- /.widget -->
-      </div>
-      <!-- /column -->
+        </div>
       <div class="space30 d-none d-md-block d-lg-none"></div>
       <div class="col-md-12 col-lg-3">
         <div class="widget">
@@ -65,13 +58,16 @@
               </div>
             </form>
           </div>
-          <!-- /.newsletter-wrapper -->
+          </div>
         </div>
-        <!-- /.widget -->
       </div>
-      <!-- /column -->
     </div>
-    <!--/.row -->
+  <div class="container inner pt-0 pb-40 d-flex align-items-center">
+    <p class="mb-0 mr-auto">{{site.data.general_settings.copyright_text}}</p>
+    <ul class="social social-mute social-s ms-auto">
+      {% for social_links in site.data.general_settings.social_accounts.links %}
+       <li><a href="{{social_links.url}}"><i class="{{social_links.icon}}"></i></a></li>
+      {% endfor %}
+    </ul>
   </div>
-  <!-- /.container -->
 </footer>

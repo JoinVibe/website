@@ -62,11 +62,11 @@ social_accounts:
 external_links:
   title: "The Network"
   links:
-    - url: "#"
+    - url: "#community"
       text: "Community"
-    - url: "#"
+    - url: "#archetypes"
       text: "Archetypes"
-    - url: "#"
+    - url: "#events"
       text: "Events"
     - url: "#"
       text: "Blog"
