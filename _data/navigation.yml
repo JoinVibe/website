@@ -2,63 +2,20 @@ main_menu:
 
   - text: "Home"
     url: "/"
+    menu_type: simple
     
   - text: "Community"
-    url: "#"
+    url: "#community"
+    menu_type: simple
         
   - text: "Archetypes"
     url: "#archetypes"
+    menu_type: simple
 
   - text: "Events"
-    url: "#"
+    url: "#events"
+    menu_type: simple
 
   - text: "Blog"
     url: "#"
-    menu_type: "dropdown"
-    level_one:
-      - text: "Classic Grid"
-        url: "/blogs/classic-grid"
-
-      - text: "Classic Grid With Sidebar"
-        url: "/blogs/classic-grid-sidebar"
-
-      - text: "Box Grid Blog"
-        url: "/blogs/boxed-grid"
-
-      - text: "Box Grid Blog With Sidebar"
-        url: "/blogs/boxed-grid-sidebar"
-
-      - text: "Classic Blog"
-        url: "/blogs/classic"
-
-      - text: "Classic Blog with Sidebar"
-        url: "/blogs/classic-sidebar"
-
-      - text: "Boxed Classic Blog"
-        url: "/blogs/boxed-classic"
-
-      - text: "Boxed Classic Blog With Sidebar"
-        url: "/blogs/boxed-classic-sidebar"
-    level_two:
-      - sub_menu_text: "Blog Posts"
-        sub_menu:
-          - text: "Post with sidebar"
-            url: "/posts/simple-post-with-sidebar"
-          - text: "Post with no sidebar"
-            url: "/posts/simple-post-with-no-sidebar"
-          - text: "Box Post with no sidebar"
-            url: "/posts/post-boxed"
-          - text: "Box Post with sidebar"
-            url: "/posts/post-boxed-sidebar"
-          - text: "Post with code highlight"
-            url: "/posts/post-with-code-highlight"
-          - text: "Post with video"
-            url: "/posts/post-with-video"
-          - text: "Post with image"
-            url: "/posts/post-with-image"
-          - text: "Post with carousel"
-            url: "/posts/post-with-carousel"
-          - text: "Post with Multiple Carousel"
-            url: "/posts/multi-carousel-post"
-          - text: "Post with gallery"
-            url: "/posts/post-with-gallery"
+    menu_type: simple
