@@ -48,23 +48,6 @@ progress_area:
   enable: true
   title: "Next Events"
   bg_image: "/assets/images/art/bg5.webp"
-  lists:
-    - title: "New Visitors"
-      sub_title: "Maecenas faucibus mollis interdum. Aenean eu leo."
-      numbers: "75"
-      color: "blue"
-    - title: "Social Media"
-      sub_title: "Maecenas faucibus mollis interdum. Aenean eu leo."
-      numbers: "80"
-      color: "green"
-    - title: "Referrals"
-      sub_title: "Maecenas faucibus mollis interdum. Aenean eu leo."
-      numbers: "60"
-      color: "red"
-    - title: "Search Engines"
-      sub_title: "Maecenas faucibus mollis interdum. Aenean eu leo."
-      numbers: "90"
-      color: "yellow"
 
 awards_area:
   enable: true
@@ -313,15 +296,20 @@ cover_image:
           {% if page.progress_area.title %}
            <h2 class="title-color color-white text-center">{{page.progress_area.title}}</h2>
           {% endif %}
-          <div class="space20"></div>
-          <div class="row text-center">
-            {% for list in page.progress_area.lists %}
-            <div class="col-md-6 col-lg-3">
-              <div class="progressbar circle {{list.color}}" data-value="{{list.numbers}}"></div>
-              <h5>{{list.title}}</h5>
-              <p>{{list.sub_title}}</p>
+          <div class="space40"></div>
+          <div class="row">
+            <div class="col-12 text-center">
+               <iframe
+                src="https://luma.com/embed/calendar/cal-5I9RQn5nx1joQwg/events"
+                width="100%"
+                height="450"
+                frameborder="0"
+                style="border: 1px solid #bfcbda88; border-radius: 4px; background: white;"
+                allowfullscreen=""
+                aria-hidden="false"
+                tabindex="0"
+              ></iframe>
             </div>
-            {% endfor %}
           </div>
         </div>
       </div>
