@@ -44,25 +44,6 @@ two_columns_area_one:
     - title: "The Entrepreneur"
       description: "Entrepreneurs bring everything together by organizing resources, building companies, and driving execution. They turn ideas into scalable ventures and lasting impact."
 
-two_columns_area_two:
-  enable: true
-  title: "What We Do?"
-  sub_title: "We specialize in web, mobile, brand & product design. We love to turn ideas into beautiful things."
-  image: "/assets/images/art/about2.webp"
-  skills:
-    - title: "Web Development"
-      numbers: 100
-      style: "pink"
-    - title: "Product Design"
-      numbers: 80
-      style: "blue"
-    - title: "Identity & Branding"
-      numbers: 85
-      style: "green"
-    - title: "Mobile Development"
-      numbers: 90
-      style: "purple"
-
 awards_area:
   enable: true
   title: "Built by the Community"
@@ -239,9 +220,9 @@ cover_image:
         <div class="row align-items-center">
             {% if page.two_column_three.image %}
             <div class="col-lg-6">
-                <figure>
-                    <img src="{{page.two_column_three.image}}" alt="{{page.two_column_three.title}}" />
-                </figure>
+                <div class="img-blob blob4 text-center">
+                    <img src="{{page.two_column_three.image}}" style="width: 30rem" alt="{{page.two_column_three.title}}" />
+                </div>
             </div>
             {% endif %}
             <div class="space40 d-lg-none"></div>
@@ -346,39 +327,6 @@ cover_image:
           </div>
           {% endfor %}
         </div>
-      </div>
-    </div>
-    </div>
-    {% endif %}
-
-    {% if page.two_columns_area_two.enable %}
-    <div class="two-columns-two">
-    <div class="space140"></div>
-    <div class="row align-items-center">
-      {% if page.two_columns_area_two.image %}
-      <div class="col-lg-6 order-lg-2 text-center">
-        <div class="img-blob blob4">
-          <img src="{{page.two_columns_area_two.image}}" style="width: 30rem" alt="{{page.two_columns_area_two.title}}" />
-        </div>
-      </div>
-      {% endif %}
-      <div class="space30 d-none d-md-block d-lg-none"></div>
-      <div class="col-lg-6 pr-60 pr-md-15">
-        {% if page.two_columns_area_two.title %}
-         <h2 class="title-color color-default">{{page.two_columns_area_two.title}}</h2>
-        {% endif %}
-        {% if page.two_columns_area_two.sub_title %}
-         <h3 class="display-3">{{page.two_columns_area_two.sub_title}}</h3>
-        {% endif %}
-        <div class="space20"></div>
-        <ul class="progress-list">
-          {% for skills in page.two_columns_area_two.skills %}
-          <li>
-            <p>{{skills.title}}</p>
-            <div class="progressbar line default" data-value="{{skills.numbers}}"></div>
-          </li>
-          {% endfor %}
-        </ul>
       </div>
     </div>
     </div>
