@@ -30,6 +30,9 @@ phone_number: "+00 (123) 456 78 90"
 # Site Wide Copyright
 copyright_text: "© 2026 Vibe Networking. All rights reserved."
 
+# Footer Tagline (shown below logo in footer)
+footer_tagline: "Where Archetypes Align"
+
 # Site Wide Google Analytics
 google_analytics:
   enable: false

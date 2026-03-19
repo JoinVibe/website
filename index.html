@@ -74,145 +74,35 @@ cover_image:
   {% include layouts/nav/nav-10.html default_logo="black" btn_header=true extra_class="absolute" alignment_class="mx-auto" %} 
 
   {% if page.hero_area.enable %}
-  <div class="wrapper dark-wrapper">
-    <div class="rev_slider_wrapper fullwidth-container">
-      <div id="slider3" class="rev_slider fullwidthbanner" data-version="5.4.7">
-        <ul>
-          <li data-transition="fade" data-thumb="">
-            {% if page.hero_area.bg_image %}
-             <img src="{{page.hero_area.bg_image}}" alt="{{page.hero_area.title}}"/>
-            {% endif %}
-            {% if page.hero_area.title %}
-            <div class="tp-caption font-weight-600 text-uppercase color-white text-center"
-               data-x="center"
-               data-y="middle"
-               data-voffset="['-130','-130','-130','-140']"
-               data-fontsize="['16','16','16','14']"
-               data-lineheight="['26','26','26','24']"
-               data-width="['600','600','600','600']"
-               data-textAlign="['center','center','center','center']"
-               data-whitespace="['normal','normal','normal','normal']"
-               data-frames='[{"delay":500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.7;sY:0.7;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-               data-responsive="off"
-               data-responsive_offset="on" style="z-index: 9; letter-spacing: 2px;"> {{page.hero_area.title}}
-          </div>
-          {% endif %}
-          {% if page.hero_area.sub_title %}
-            <div class="tp-caption font-weight-600 color-white text-center"
-               data-x="center"
-               data-y="middle"
-               data-voffset="['-30','-30','-30','-30']"
-               data-fontsize="['55','55','50','35']"
-               data-lineheight="['65','65','60','45']"
-               data-width="['620','620','600','340']"
-               data-textAlign="['center','center','center','center']"
-               data-whitespace="['normal','normal','normal','normal']"
-               data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.7;sY:0.7;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-               data-responsive="on"
-               data-responsive_offset="on" style="z-index: 9;"> {{page.hero_area.sub_title}}
-           </div>
-          {% endif %}
-            <a class="tp-caption btn-play" id="slide-537-layer-4"
-               data-x="center"
-               data-y="middle"
-               data-voffset="['100','100','100','115']"
-               data-width="['auto','auto','auto','auto']"
-               data-textAlign="['center','center','center','center']"
-               data-actions='[{"event":"mouseenter","action":"startlayer","layer":"slide-537-layer-18","delay":""},{"event":"mouseleave","action":"stoplayer","layer":"slide-537-layer-18","delay":""},{"event":"click","action":"startlayer","layer":"slide-537-layer-15","delay":""},{"event":"click","action":"startlayer","layer":"slide-537-layer-19","delay":""},{"event":"click","action":"startlayer","layer":"slide-537-layer-20","delay":"1000"},{"event":"click","action":"playvideo","layer":"slide-537-layer-15","delay":"1000"}]'
-               data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"z:0;rX:0;rY:0;rZ:0;sX:0.7;sY:0.7;skX:0;skY:0;opacity:0;","to":"o:1;","ease":"Power4.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"opacity:0;","ease":"Power3.easeInOut"}]'
-               data-responsive="on"
-               data-responsive_offset="on" style="z-index: 9;" href="#">
-          </a>
-            <div class="tp-caption tp-shape tp-shapewrapper" id="slide-537-layer-1"
-               data-x="['center','center','center','center']"
-               data-hoffset="['0','0','0','0']"
-               data-y="['middle','middle','middle','middle']"
-               data-voffset="['0','0','0','0']"
-               data-width="full"
-               data-height="full"
-               data-whitespace="nowrap"
-               data-type="shape"
-               data-basealign="slide"
-               data-responsive_offset="off"
-               data-responsive="off"
-               data-frames='[{"from":"opacity:0;","speed":2000,"to":"o:1;","delay":0,"ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"to":"opacity:0;","ease":"nothing"}]'
-               data-textAlign="['left','left','left','left']"
-               data-paddingtop="[0,0,0,0]"
-               data-paddingright="[0,0,0,0]"
-               data-paddingbottom="[0,0,0,0]"
-               data-paddingleft="[0,0,0,0]" style="z-index: 5;background-color:rgba(51,51,51,0.15);">
-          </div>
-            <div class="tp-caption tp-shape tp-shapewrapper" id="slide-537-layer-19"
-               data-x="['center','center','center','center']"
-               data-hoffset="['0','0','0','0']"
-               data-y="['middle','middle','middle','middle']"
-               data-voffset="['0','0','0','0']"
-               data-width="full"
-               data-height="full"
-               data-whitespace="nowrap"
-               data-type="shape"
-               data-basealign="slide"
-               data-responsive_offset="off"
-               data-responsive="off"
-               data-frames='[{"from":"opacity:0;","speed":2000,"to":"o:1;","delay":"bytrigger","ease":"Power2.easeInOut"},{"delay":"bytrigger","speed":500,"to":"opacity:0;","ease":"nothing"}]'
-               data-textAlign="['left','left','left','left']"
-               data-paddingtop="[0,0,0,0]"
-               data-paddingright="[0,0,0,0]"
-               data-paddingbottom="[0,0,0,0]"
-               data-paddingleft="[0,0,0,0]"
-               data-lasttriggerstate="reset" style="z-index: 6;background-color:rgba(0,0,0,0.75);">
-          </div>
-           {% if page.hero_area.vimeo_video_id %}
-            <div class="tp-caption tp-videolayer" id="slide-537-layer-15"
-               data-x="['center','center','center','center']"
-               data-hoffset="['0','0','0','0']"
-               data-y="['middle','middle','middle','middle']"
-               data-voffset="['-10','-10','-10','-10']"
-               data-whitespace="nowrap"
-               data-type="video"
-               data-responsive_offset="on"
-               data-frames='[{"from":"z:0;rX:0;rY:0;rZ:0;sX:0.9;sY:0.9;skX:0;skY:0;opacity:0;","speed":1500,"to":"o:1;","delay":"bytrigger","ease":"Power3.easeInOut"},{"delay":"bytrigger","speed":300,"to":"auto:auto;","ease":"nothing"}]'
-               data-vimeoid="{{page.hero_area.vimeo_video_id}}"
-               data-videoattributes="title=0&byline=0&portrait=0&api=1"
-               data-videowidth="['960px','720px','580px','360px']"
-               data-videoheight="['540px','405px','326px','203px']"
-               data-videoloop="none"
-               data-textAlign="['left','left','left','left']"
-               data-paddingtop="[0,0,0,0]"
-               data-paddingright="[0,0,0,0]"
-               data-paddingbottom="[0,0,0,0]"
-               data-paddingleft="[0,0,0,0]"
-               data-lasttriggerstate="reset"
-               data-autoplay="off"
-               data-volume="100" style="z-index: 14;">
-           </div>
-            {% endif %}
-            <div class="tp-caption video-control" id="slide-537-layer-20"
-               data-x="['center','center','center','center']"
-               data-hoffset="['510','389','330','210']"
-               data-y="['middle','middle','middle','middle']"
-               data-voffset="['-268','-198','-163','-120']"
-               data-width="42"
-               data-height="42"
-               data-lineheight="['46','46','46','46']"
-               data-whitespace="nowrap"
-               data-type="button"
-               data-actions='[{"event":"click","action":"stoplayer","layer":"slide-537-layer-15","delay":""},{"event":"click","action":"stoplayer","layer":"slide-537-layer-19","delay":""},{"event":"click","action":"stoplayer","layer":"slide-537-layer-20","delay":""}]'
-               data-responsive_offset="on"
-               data-responsive="on"
-               data-frames='[{"delay":"bytrigger","speed":1500,"frame":"0","from":"sX:0.9;sY:0.9;opacity:0;fb:20px;","to":"o:1;fb:0;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"sX:0.9;sY:0.9;opacity:0;fb:20px;","ease":"Power3.easeInOut"}]'
-               data-textAlign="['center','center','center','center']"
-               data-paddingtop="[0,0,0,0]"
-               data-paddingright="[0,0,0,0]"
-               data-paddingbottom="[0,0,0,0]"
-               data-paddingleft="[0,0,0,0]"
-               data-lasttriggerstate="reset" style="z-index: 15;"><i class="c-close"></i>
-          </div>
-          </li>
-        </ul>
-        <div class="tp-bannertimer tp-bottom"></div>
-      </div>
+  <div class="vibe-hero" style="position: relative; height: 100vh; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+    <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+      <source src="/assets/media/vibe-event-hero.mp4" type="video/mp4">
+      {% if page.hero_area.bg_image %}
+      <img src="{{ page.hero_area.bg_image }}" alt="{{ page.hero_area.title }}">
+      {% endif %}
+    </video>
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.55); z-index: 1;"></div>
+    <div style="position: relative; z-index: 2; text-align: center; color: #fff; padding: 0 1.5rem; max-width: 860px;">
+      {% if page.hero_area.title %}
+      <h1 class="font-weight-700" style="font-size: clamp(2.8rem, 8vw, 5.5rem); line-height: 1.05; margin: 0 0 0.75rem; color: #fff; text-shadow: 0 2px 24px rgba(0,0,0,0.6); letter-spacing: -1px;">{{ page.hero_area.title }}</h1>
+      {% endif %}
+      {% if page.hero_area.sub_title %}
+      <p class="font-weight-400" style="font-size: clamp(1rem, 3vw, 1.4rem); margin: 0 0 2rem; color: #fff; letter-spacing: 2px;">{{ page.hero_area.sub_title }}</p>
+      {% endif %}
+      <a href="{{ page.two_column_three.button_url }}" target="_blank" rel="noopener noreferrer" class="btn btn-default btn-lg" style="font-size: clamp(0.85rem, 2vw, 1rem); padding: 0.75rem 2.25rem; letter-spacing: 1px;">Join Our Community</a>
     </div>
+    <a href="#community" style="position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%); z-index: 2; text-align: center; color: #fff; text-decoration: none; animation: heroArrowBounce 1.6s ease-in-out infinite;">
+      <p style="font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 0.4rem; opacity: 0.8;">Discover</p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="display: block; margin: 0 auto;">
+        <polyline points="6 9 12 15 18 9"></polyline>
+      </svg>
+    </a>
+    <style>
+      @keyframes heroArrowBounce {
+        0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.8; }
+        50% { transform: translateX(-50%) translateY(6px); opacity: 1; }
+      }
+    </style>
   </div>
   {% endif %}
 

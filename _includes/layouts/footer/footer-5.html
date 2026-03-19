@@ -1,5 +1,5 @@
 <footer class="{% if include.extra_class %} {{include.extra_class}} {% else %} dark-wrapper inverse-text {% endif %}">
-  <div class="container inner">
+  <div class="container inner" style="padding-top: 2.5rem; padding-bottom: 2.5rem;">
     <div class="row">
       <div class="col-md-4 col-lg-3">
         <div class="widget">
@@ -10,9 +10,10 @@
             {% elsif logo_type == 'black' %}
               <img src="{{site.data.general_settings.black_logo_1x}}" srcset="{{site.data.general_settings.black_logo_1x}} 1x, {{site.data.general_settings.black_logo_2x}} 2x" alt="{{site.data.general_settings.title}}" />
             {% endif %}
-          </a>          
-          <div class="space40"></div>
-          <p class="mb-0 mr-auto">{{site.data.general_settings.copyright_text}}</p>
+          </a>
+          {% if site.data.general_settings.footer_tagline %}
+          <p class="mt-2 mb-0" style="font-style: italic; opacity: 0.75;">{{site.data.general_settings.footer_tagline}}</p>
+          {% endif %}
         </div>
         </div>
       <div class="col-md-4 col-lg-3">
@@ -62,4 +63,11 @@
         </div>
       </div>
     </div>
+  <div class="container" style="border-top: 1px solid rgba(255,255,255,0.15); padding-top: 1rem; padding-bottom: 1rem; margin-top: 0.5rem;">
+    <div class="row">
+      <div class="col-12 text-center">
+        <p class="mb-0" style="opacity: 0.6; font-size: 0.875rem;">{{site.data.general_settings.copyright_text}}</p>
+      </div>
+    </div>
+  </div>
 </footer>
